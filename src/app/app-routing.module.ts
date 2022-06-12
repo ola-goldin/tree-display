@@ -5,9 +5,6 @@ import { DisplayComponent } from './components/display/display.component';
 import { PermissionBuilderComponent } from './components/permissions-manager/permission-builder/permission-builder.component';
 import { PERMISSIONS, ROLES } from './models/interfaces';
 
-export function silentRedirect(state: RouterStateSnapshot) {
-    return state
-}
 
 const routes: Routes = [
   { path: '', redirectTo: '/connections', pathMatch: 'full' },
