@@ -1,0 +1,10 @@
+<div>
+  <h3>Roles Assignment Selection</h3>
+ 
+  <button class="btn btn-outline-secondary m-3 mx-0" (click)="addRole()">Add {{permission}} Role</button>
+  <button class="btn btn-outline-secondary m-3" (click)="removeRole()">Remove {{permission}} Role</button>
+  <br>
+  <div *ngxPermissionsOnly="permission">
+    I should see this when i have {{permission}} role
+  </div>
+</div>

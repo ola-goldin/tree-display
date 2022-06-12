@@ -1,0 +1,20 @@
+
+<app-roles>
+
+</app-roles>
+
+<div *ngxPermissionsOnly="permitedRole" >
+    <p class="toggles">
+        <button class="btn btn-outline-primary btn-sm m-3 mx-0" (click)="expandAll()" >Expand All</button>
+    
+        <button class="btn btn-outline-primary btn-sm m-3" (click)="collapseAll()" >Collapse All</button>
+    </p>
+</div>
+
+<my-folder-tree *ngxPermissionsOnly="permitedRole; authorisedStrategy:  enableFunc.bind(this); unauthorisedStrategy: disabledFunc.bind(this)"
+    [rootFolder]="rootFolder"
+    [expandedFolders]="expandedFolders"
+    (toggleFolder)="toggleFolder( $event)">
+</my-folder-tree>
+
+

@@ -5,6 +5,9 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "paths": {
+      "@angular/*": ["./node_modules/@angular/*"]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
